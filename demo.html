@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+<span>Fahrenheit </span><input type="number" id="input" oninput="change(this.value)">
+<p>Result: <span id="result"></span></p>
+<script>
+    //core C = (F - 32)/1.8
+function change(valueC) {
+    let text = document.getElementById("input").value;
+    valueC = parseInt(valueC);
+    valueC = (valueC -32)/ 1.8;
+   document.getElementById("result").innerHTML= valueC;
+}
+</script>
+</body>
+</html>
